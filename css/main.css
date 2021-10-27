@@ -112,11 +112,29 @@ textarea {
 }
 
 .container {
-  width: 1200px;
+  max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -137,22 +155,40 @@ textarea {
 .card-set-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+@media screen and (min-width: 768px) {
+  .card-set-list {
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+  }
 }
 
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: 30px;
+  font-size: 28px;
   line-height: 1.17;
   color: var(--modal-svg);
   font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+  }
 }
 
 .team-join .link {
@@ -294,8 +330,8 @@ textarea {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-transform: uppercase;
   background-color: var(--hiro-text-buck-color);
   letter-spacing: 0.06em;
@@ -305,9 +341,16 @@ textarea {
 .hero .hero__text {
   margin-bottom: 30px;
   color: var(--primary-white-color);
-  font-size: 44px;
   font-weight: 900;
-  line-height: 136%;
+  font-size: 26px;
+  line-height: 161%;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .hero__text {
+    font-size: 44px;
+    line-height: 136%;
+  }
 }
 
 .hero .hero__button {
@@ -330,7 +373,7 @@ textarea {
 }
 
 .overlay {
-  max-width: 1600px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, var(--linear-gradient), var(--linear-gradient)), url(../images/icons.svg/Img.jpg);
@@ -339,10 +382,34 @@ textarea {
   background-position: center;
 }
 
+@media screen and (min-width: 768px) {
+  .overlay {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 .features-item {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-item {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .features-item .features-item__title {
@@ -403,27 +470,30 @@ textarea {
   background-color: var(--work-rgba);
 }
 
-.card-set-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
-}
-
 .team {
   background-color: var(--team-buck-color);
 }
 
 .team-item {
   padding-bottom: 30px;
-  flex-basis: calc(100% / 4 - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--card-shadow);
+  margin: 15px;
   margin-top: var(--card-set-gap);
-  margin-left: var(--card-set-gap);
   background-color: var(--primary-white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .team-item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-item {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .team-item .img {

@@ -1,6 +1,6 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-transform: uppercase;
   background-color: var(--hiro-text-buck-color);
   letter-spacing: 0.06em;
@@ -9,9 +9,15 @@
   & .hero__text {
     margin-bottom: 30px;
     color: var(--primary-white-color);
-    font-size: 44px;
     font-weight: 900;
-    line-height: 136%;
+
+    font-size: 26px;
+    line-height: 161%;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 136%;
+    }
   }
 
   & .hero__button {
@@ -38,7 +44,7 @@
 }
 
 .overlay {
-  max-width: 1600px;
+  max-width: 480px;
 
   margin-left: auto;
   margin-right: auto;
@@ -51,4 +57,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
