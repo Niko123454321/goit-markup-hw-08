@@ -1,0 +1,226 @@
+.backdrop {
+  position: fixed;
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--backdrop-rgba);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.backdrop-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.backdrop-close {
+  position: absolute;
+  cursor: pointer;
+  height: 30px;
+  border: none;
+  background-color: var(--primary-white-color);
+  padding: 0px;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+
+  &:hover,
+  &:focus {
+    fill: var(--modal-input);
+  }
+}
+
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  box-shadow: var(--shadow-modal);
+  border-radius: 4px;
+  background-color: var(--primary-white-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-tetle-text {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+
+  color: var(--modal-svg);
+}
+
+.modal-input {
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+
+  padding-left: 42px;
+  padding-right: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid var(--modal-input-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--modal-input);
+  }
+
+  &:hover ~ .modal-svg,
+  &:focus ~ .modal-svg {
+    fill: var(--modal-input);
+  }
+}
+
+.modal-label-text {
+  display: inline-flex;
+  margin-bottom: 4px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--modal-label-textr);
+}
+
+.textarea {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: 120px;
+  width: 100%;
+  border: 1px solid var(--modal-input-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus,
+  &:hover {
+    border: 1px solid var(--modal-input);
+  }
+}
+
+.modal .checkbox {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+
+  &:hover + .checkbox-icon,
+  &:focus + .checkbox-icon {
+    border: 2px solid var(--modal-input);
+  }
+
+  &:checked + .checkbox-icon {
+    border: none;
+    background: var(--accent-color);
+    background-image: url(../images/icons.svg/icon-check.svg);
+    background-origin: border-box;
+  }
+}
+
+.modal-label-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid var(--modal-svg);
+  cursor: pointer;
+}
+
+.modal .checkbox-accent {
+  color: var(--modal-input);
+  margin-left: 4px;
+}
+
+.modal .button-submit {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 187% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  box-shadow: var(--button-submit-shadow);
+  border-radius: 4px;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-submit);
+  }
+}
+
+.modal .modal-div {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-svg {
+  position: absolute;
+
+  top: 60%;
+  left: 14.27px;
+  fill: var(--modal-svg);
+}
+
+.modal .modal-svg-name {
+  height: 12px;
+  width: 12px;
+}
+.modal .modal-svg-tel {
+  height: 13px;
+  width: 13px;
+}
+.modal .modal-svg-mail {
+  height: 12px;
+  width: 15px;
+}

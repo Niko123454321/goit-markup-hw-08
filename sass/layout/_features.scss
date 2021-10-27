@@ -1,0 +1,33 @@
+.features-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+
+  & .features-item__title {
+    margin-bottom: 10px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+
+  & .features-item__text {
+    line-height: 200%;
+    color: var(--primary-text-color);
+  }
+}
+
+.features-item__features-svg-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: var(--team-buck-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.features-item__feachers-svg {
+  padding: 0;
+
+  width: 70px;
+  height: 70px;
+}

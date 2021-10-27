@@ -1,0 +1,14 @@
+.logo {
+  font-family: raleway;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--accent-color);
+
+  & .logo--accent-black {
+    color: var(--title-text-color);
+  }
+
+  & .logo--accent-white {
+    color: var(--primary-white-color);
+  }
+}

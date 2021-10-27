@@ -1,0 +1,33 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --hiro-text-buck-color: #2f303a;
+  --accent-color: #2196f3;
+  --modal-input: rgba(33, 150, 243, 1);
+  --modal-svg: rgba(33, 33, 33, 1);
+  --primary-white-color: #ffffff;
+  --footer-contact-color: rgb(160, 150, 150);
+  --footer-buck-color: #2f303a;
+  --team-buck-color: #f5f4fa;
+  --border: #ececec;
+  --border-projecc: #eeeeee;
+  --linear-gradient: rgba(47, 48, 58, 0.4);
+  --footer-svg: rgba(255, 255, 255, 0.1);
+  --team-svg: #afb1b8;
+  --button-submit: #188ce8;
+  --backdrop-rgba: rgba(0, 0, 0, 0.2);
+  --work-rgba: rgba(47, 48, 58, 0.8);
+  --modal-input-border: rgba(33, 33, 33, 0.2);
+  --modal-label-text: rgba(117, 117, 117, 1);
+  --footer-input-border: rgba(255, 255, 255, 0.3);
+
+  --button-submit-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --project-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --card-set-gap: 30px;
+}
