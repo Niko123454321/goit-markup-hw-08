@@ -1,8 +1,28 @@
 .clients {
-  display: flex;
+  justify-content: space-between;
 
-  & .item + .item {
-    margin-left: 30px;
+  @media screen and (min-width: 768px) {
+    justify-content: normal;
+  }
+}
+
+.clients .item {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  margin-top: 30px;
+  flex-basis: calc(100% / 2 - 30px);
+
+  @media screen and (min-width: 768px) {
+    margin-left: 29px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 29px;
+
+    flex-basis: calc(100% / 6 - 30px);
   }
 }
 
@@ -17,8 +37,9 @@
   justify-content: center;
 
   cursor: pointer;
-  width: 170px;
-  height: 91px;
+
+  width: 210px;
+  height: 92px;
   fill: var(--team-svg);
   border-radius: 4px;
   border: 1px solid var(--team-svg);
@@ -29,5 +50,13 @@
   &:focus {
     border: 1px solid var(--accent-color);
     fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
