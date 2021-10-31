@@ -4,11 +4,11 @@
   font-weight: 700;
   color: var(--accent-color);
 
-  & .logo--accent-black {
+  &--accent-black {
     color: var(--title-text-color);
   }
 
-  & .logo--accent-white {
+  &--accent-white {
     color: var(--primary-white-color);
   }
 }
