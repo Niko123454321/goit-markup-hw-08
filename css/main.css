@@ -138,9 +138,17 @@ textarea {
 
 .logo {
   font-family: raleway;
-  font-size: 26px;
+  font-size: 24px;
+  line-height: 1.16;
   font-weight: 700;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo--accent-black {
@@ -249,7 +257,18 @@ textarea {
   display: flex;
   line-height: 110%;
   letter-spacing: 0.02em;
-  margin-left: 93px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
+  }
 }
 
 .site-nav .item + .item {
@@ -288,10 +307,23 @@ textarea {
 }
 
 .contact {
-  display: flex;
   margin-left: auto;
   fill: var(--primary-text-color);
   color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
 }
 
 .contact .contact__envelope {
@@ -308,17 +340,38 @@ textarea {
   fill: currentColor;
 }
 
-.contact .item + .item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .contact .item + .item {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .item + .item {
+    margin-left: 50px;
+  }
 }
 
 .contact .link {
   font-weight: 500;
-  line-height: 110%;
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .contact .link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .contact .link:hover, .contact .link:focus {
@@ -578,8 +631,11 @@ textarea {
   background: var(--footer-buck-color);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer .container {
+    flex-basis: calc(100% / 2 - 30px);
+    flex-wrap: wrap;
+    justify-content: space-around;
     display: flex;
     align-items: baseline;
   }

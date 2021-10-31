@@ -4,7 +4,10 @@
   background: var(--footer-buck-color);
 
   & .container {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 30px);
+      flex-wrap: wrap;
+      justify-content: space-around;
       display: flex;
       align-items: baseline;
     }
