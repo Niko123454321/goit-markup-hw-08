@@ -259,6 +259,12 @@ textarea {
   letter-spacing: 0.02em;
 }
 
+@media (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .site-nav {
     margin-left: 88px;
@@ -289,7 +295,7 @@ textarea {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.link.current {
   color: var(--accent-color);
 }
 
@@ -312,6 +318,12 @@ textarea {
   color: var(--primary-text-color);
 }
 
+@media (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contact {
     flex-wrap: wrap;
@@ -322,7 +334,6 @@ textarea {
   .contact {
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-end;
   }
 }
 
@@ -349,6 +360,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .contact .item + .item {
     margin-left: 50px;
+    margin-top: 0;
   }
 }
 
@@ -375,6 +387,75 @@ textarea {
 }
 
 .contact .link:hover, .contact .link:focus {
+  color: var(--accent-color);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  background-color: var(--primary-white-color);
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: var(--accent-color);
+}
+
+@media (min-width: 787px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu .link:hover, .mobile-menu .link:focus {
   color: var(--accent-color);
 }
 
@@ -574,6 +655,8 @@ textarea {
 
 .clients .item {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 30px;
   margin-left: 27px;
   flex-basis: calc(100% / 2 - 30px);

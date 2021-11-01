@@ -18,6 +18,9 @@
   line-height: 110%;
   letter-spacing: 0.02em;
 
+  @media (max-width: 767px) {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
     margin-left: 88px;
   }
@@ -46,7 +49,7 @@
   }
 }
 
-.site-nav .link.current {
+.link.current {
   color: var(--accent-color);
 }
 
@@ -68,13 +71,16 @@
   fill: var(--primary-text-color);
   color: var(--primary-text-color);
 
+  @media (max-width: 767px) {
+    display: none;
+  }
+
   @media screen and (min-width: 768px) {
     flex-wrap: wrap;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-end;
   }
 }
 
@@ -99,6 +105,7 @@
 
   @media screen and (min-width: 1200px) {
     margin-left: 50px;
+    margin-top: 0;
   }
 }
 
