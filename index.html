@@ -433,24 +433,28 @@
       </svg>
     </button>
 
-    <ul class="mobile-menu">
-      <li class="link"><a href="./index.html" class="link current">Студия</a></li>
-      <li class="link"><a href="./portfolio.html" class="link">Портфолио</a></li>
-      <li class="link"><a href="" class="link">Контакты</a></li>
+    <ul class="mobile-menu list">
+      <li class="mobile-menu-item"><a href="./index.html" class="link current">Студия</a></li>
+      <li class="mobile-menu-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+      <li class="mobile-menu-item"><a href="" class="link">Контакты</a></li>
     </ul>
+    <div>
+      <ul class="mob-menu-contact list">
+        <li class="mob-menu-contact-tel "><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+        <li class="mob-menu-contact-env "><a href="mailto:info@example.com" class="link">info@devstudio.com</a></li>
+      </ul>
 
-    <ul class="mob-menu-contact">
-      <li class="mob-menu-contact-tel list"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
-      <li class="mob-menu-contact-env list"><a href="mailto:info@example.com" class="link">info@devstudio.com</a></li>
-    </ul>
-
-    <ul class="mob-menu-social">
-      <li class="list"> <a href="" target="blank" rel="noopener noreferrer" class="link ">Instagram</a></li>
-      <li class="list"> <a href="" target="blank" rel="noopener noreferrer" class="link ">Twitter</a></li>
-      <li class="list"> <a href="" target="blank" rel="noopener noreferrer" class="link ">Facebook</a></li>
-      <li class="list"> <a href="" target="blank" rel="noopener noreferrer" class="link ">LinkedIn</a></li>
-    </ul>
-
+      <ul class="mob-menu-social list">
+        <li class="mob-menu-social-item"> <a href="" target="blank" rel="noopener noreferrer"
+            class="link ">Instagram</a></li>
+        <li class="mob-menu-social-item"> <a href="" target="blank" rel="noopener noreferrer" class="link ">Twitter</a>
+        </li>
+        <li class="mob-menu-social-item"> <a href="" target="blank" rel="noopener noreferrer" class="link ">Facebook</a>
+        </li>
+        <li class="mob-menu-social-item"> <a href="" target="blank" rel="noopener noreferrer" class="link ">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
@@ -499,8 +503,10 @@
         <label class="modal-label-checkbox">
           <input type="checkbox" name="checkbox" class="checkbox" required />
           <span class="checkbox-icon"></span>
-          Соглашаюсь с рассылкой и принимаю
-          <a href="" class="checkbox-accent">Условия договора</a>
+          <p class="modal-label-checkbox-text">
+            Соглашаюсь с рассылкой и принимаю
+            <a href="" class="checkbox-accent">Условия договора</a>
+          </p>
         </label>
 
         <button type="submit" class="button-submit">Отправить</button>
