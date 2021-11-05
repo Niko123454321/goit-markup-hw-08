@@ -18,6 +18,8 @@
 }
 
 .menu-toggle {
+  position: absolute;
+  right: 10px;
   min-height: 40px;
   min-width: 40px;
   display: flex;
@@ -99,7 +101,6 @@
   padding: 0;
   margin: 0;
   display: flex;
-  flex-basis: calc(100% / 4);
 }
 
 .mob-menu-social .link {
