@@ -14,9 +14,16 @@
   }
 
   & .features-item__title {
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
-    line-height: 110%;
+    font-size: 14px;
+    line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+    }
   }
 
   & .features-item__text {
